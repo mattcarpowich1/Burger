@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
 router.post('/add', (req, res) => {
 	addBurger(req.body.name)
 	.then( () => {
-		res.end();
+		res.redirect('/');
 	})
 	.catch( err => {
 		throw err;

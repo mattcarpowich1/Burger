@@ -1,5 +1,7 @@
 $(function() {
 
+	$('input').focus();
+
 	$('form').on('submit', function(e) {
 		// prevent page from refreshing
 		e.preventDefault();

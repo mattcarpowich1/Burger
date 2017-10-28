@@ -1,6 +1,7 @@
 <div id="burger_area">
 
 	<ul id="undevoured">
+		<h2>Available Burgers</h2>
 		{{#each burgers}}
 			{{#unless this.devoured }}
 				<li>
@@ -17,6 +18,7 @@
 	</ul>
 
 	<ul id="devoured">
+		<h2>Devoured Burgers</h2>
 		{{#each burgers}}
 			{{#if this.devoured }}
 				<li>

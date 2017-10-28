@@ -12,6 +12,7 @@ header {
 	justify-content: space-between;
 	background-color: #E83F6F;
 	padding: 10px 5%;
+	filter: drop-shadow(0px 1px 2px rgba(0, 0, 2, 0.5));
 }
 
 h1 {
@@ -22,17 +23,32 @@ h1 {
 	margin: 0 !important;
 	white-space: nowrap;
 	margin-right: 20px !important;
+	text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.6);
 }
+
+h2 {
+	text-align: center;
+	color: white;
+	font-family: 'Caveat Brush', cursive;
+	font-size: 2.5em;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+	text-shadow: 0px 2px 2px rgba(0, 0, 2, 0.68);
+}
+
 ul {
 	list-style-type: none;
 	padding: 0px !important;
 	width: 45%;
+	margin: 0;
 }
 
 ul li {
 	padding: 20px;
 	margin-bottom: 10px;
 	background-color: #FFBF00;
+	border-radius: 2px;
 	box-shadow: 4px 4px 8px -1px rgba(0,0,0,0.5);
 	color: #000004;
 	font-size: 24px;
@@ -43,24 +59,25 @@ ul#devoured li {
 	color: #545454;
 }
 
+
 .devour-btn {
 	border: none;
 	background-color: rgba(0,0,0,0);
 	color: #000004;
-	font-size: 20px;
+	font-size: 15px;
 	font-family: 'Caveat Brush', cursive;
 }
 
 .devoured-btn {
+	padding: 5px !important;
 	background-color: rgba(0,0,0,0);
 	color: #545454;
 	font-family: 'Caveat Brush', cursive;
-	font-size: 20px;
 	border: none;
 }
 
 .devour-btn:hover {
-	cursor: pointer;
+/*	cursor: pointer;*/
 }
 
 .fa-cutlery {
@@ -68,11 +85,18 @@ ul#devoured li {
 	font-size: 15px !important;
 	background-color: rgba(0,0,0,0) !important;
 	transition: all .5s ease-in;
+	cursor: pointer;
+	outline: none;
 }
 
 .fa-cutlery:hover {
 	color: #32936F !important;
+	font-size: 18px !important;
 	transition: all .5s ease-out;
+}
+
+.fa-cutlery:active {
+	outline: none;
 }
 
 #add {
@@ -80,31 +104,32 @@ ul#devoured li {
 	width: 30%;
 	font-size: 15px;
 	border: none;
-	background-color: #2274A5;
+	border-radius: 2px;
+	background-color: #32936F;
 	color: #FFFFFF;
 	padding: 10px 15px;
 	box-shadow: 2px 2px 10px 1px rgba(119,119,119,.7);
 	cursor: pointer;
 	outline: none;
-	transition: all .5s ease-in;
+	transition: all .3s ease-in;
 	white-space: nowrap;
 }
 
 #add:hover {
-	background-color: #459cd1;
+	background-color: #4cc498;
 	box-shadow: 3px 3px 10px 1px rgba(119,119,119,.8);
-	transition: all .5s ease-out;
+	transition: all .3s ease-out;
 }
 
-#add:active {
+/*#add:active {
 	background-color: #2274A5;
 	box-shadow: 3px 3px 10px 1px rgba(119,119,119,.8);
-}
+}*/
 
 .row {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: flex-start;
 	margin-top: 10px;
 	width: 100%;
@@ -117,40 +142,46 @@ ul#devoured li {
 .fa-times {
 	cursor: pointer;
 	color: #545454;
-	font-size: 15px;
-	transition-property: color;
-	transition-duration: .5s;
-	transition-timing-function: ease-in;
+	font-size: 15px !important;
+	transition: all .5s ease-in;
+	outline: none;
+}
+.fa-times:active {
+	outline: none;
 }
 
 .fa-times:hover {
 	color: #000004;
-	transition-property: color;
-	transition-duration: .5s;
-	transition-timing-function: ease-out;
+	transition: all .5s ease-out;
 }
 
 form {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: flex-end;
 	border: none;
 	border-radius: 2px;
 	font-family: 'Open Sans', sans-serif;
 	color: #000004;
 	font-size: 12px;
-	width: 50%;
+	width: 45%;
 }
 
 input {
 	height: 30px;
-	width: 60%;
+	width: 67%;
 	outline: none;
 	padding: 5px 5px;
 	box-shadow: 2px 2px 10px 1px rgba(119,119,119,.7);
+	transition: box-shadow .3s ease-in;
 	margin-bottom: 10px;
-	margin-right: 5px;
+	margin-right: 3%;
+}
+
+input:focus {
+	transition: box-shadow .3s ease-out;
+	box-shadow: 3px 3px 10px 1px rgba(119,119,119,.8);
 }
 
 input[type=text] {
@@ -166,6 +197,7 @@ input[type=text] {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
 	width: 100%;
 }
 
@@ -208,10 +240,14 @@ input[type=text] {
 	}
 
 	h1 {
-		font-size: 6em;
+		font-size: 11vw;
 	}
 
 	form {
+		width: 89%;
+	}
+
+	#burger_area {
 		width: 80%;
 	}
 
@@ -232,6 +268,10 @@ input[type=text] {
 		font-size: 5em;
 	}
 
+	h2 {
+		font-size: 1.8em;
+	}
+
 	#add {
 		font-size: 12px;
 		height: 40px;
@@ -239,6 +279,10 @@ input[type=text] {
 
 	form {
 		width: 100%;
+	}
+
+	#burger_area {
+		width: 90%;
 	}
 
 	ul li {
@@ -257,6 +301,10 @@ input[type=text] {
 
 	h1 {
 		font-size: 14vw;
+	}
+
+	h2 {
+		font-size: 6vw;
 	}
 
 	#add {
